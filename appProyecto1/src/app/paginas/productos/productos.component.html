@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of listaProductos">
+        <th scope="row">{{producto.id}}</th>
+        <td>{{producto.title}}</td>
+        <td>{{producto.price}}</td>
+        <td><button type="button" class = "btn btn-outline-primary" [routerLink]="['/productos' , producto.id]">Detalle</button></td>
+      </tr>
+    </tbody>
+  </table>
